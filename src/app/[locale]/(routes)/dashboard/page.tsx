@@ -6,7 +6,6 @@ import React from "react";
 const Page = () => {
   const t = useTranslations("Asosiy");
   const pathName = usePathname();
-  console.log("pathname", pathName);
   return (
     <div>
       <div>{t("title")}</div>
