@@ -19,7 +19,9 @@ export default async function LocaleLayout({ children, params }: Props) {
       <head />
       <body>
         <NextIntlClientProvider>
-          <div className="min-h-screen w-full">{children}</div>
+          <div className="min-h-screen w-full">
+            <div>{children}</div>
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>
