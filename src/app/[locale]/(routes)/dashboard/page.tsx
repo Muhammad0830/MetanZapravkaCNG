@@ -1,5 +1,5 @@
 "use client";
-import { Link, usePathname } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18nchanged/navigation";
 import { useTranslations } from "next-intl";
 import React from "react";
 
