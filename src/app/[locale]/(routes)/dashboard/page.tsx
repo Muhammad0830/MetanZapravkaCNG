@@ -12,7 +12,6 @@ import {
 } from "@/lib/mock-data";
 import { useRealtimeDispensers } from "@/lib/use-realtime";
 import type { PaymentMethod, Transaction, Vehicle } from "@/lib/types";
-import ThemeToggle from "@/components/Navbar/theme-toggle";
 import { AlertTriangle } from "lucide-react";
 
 const Page = () => {
@@ -111,23 +110,22 @@ const Page = () => {
   );
 
   return (
-    <div className="lg:py-6 py-4">
-      <div className="space-y-6 px-4 lg:px-6">
+    <div>
+      <div className="space-y-3">
         <div className="flex items-center justify-between">
           <h1 className="text-3xl font-bold text-black dark:text-white">
-            {t("dashboard")}
+            {t("Dashboard")}
           </h1>
           <button
             onClick={handleEmergencyStop}
             className="flex items-center gap-2 px-2 py-0.5 rounded-sm bg-red-600/60 group hover:bg-red-600/80 transition-colors duration-150 cursor-pointer"
           >
-            <AlertTriangle className="w-5 h-5 text-red-500" />
-            <div>{t("emergencyStop")}</div>
+            <AlertTriangle className="w-5 h-5 dark:text-[#ff0000] text-[#a00000]" />
+            <div className="text-black dark:text-white font-semibold">
+              {t("emergencyStop")}
+            </div>
           </button>
         </div>
-
-        {/* <div className="dark:text-white text-black">Toggle</div>
-        <ThemeToggle /> */}
 
         {isEmergency && <EmergencyBanner />}
 

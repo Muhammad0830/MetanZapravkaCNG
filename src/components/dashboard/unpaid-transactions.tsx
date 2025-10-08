@@ -36,7 +36,7 @@ export function UnpaidTransactions({
 
   return (
     <div>
-      <div className="flex items-center gap-2 mb-2">
+      <div className="flex items-center gap-2 mb-2 text-black dark:text-white">
         <CircleDollarSign className="h-6 w-6" />
         <h1 className="md:text-xl text-lg font-semibold">
           {t("Unpaid operations")}
