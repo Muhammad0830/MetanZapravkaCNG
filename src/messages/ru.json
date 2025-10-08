@@ -2,5 +2,10 @@
   "Asosiy": {
     "title": "Ru Bizning saytga xush kelibsiz",
     "description": "Ru Bu o'zbekcha tavsif"
+  },
+  "Dashboard": {
+    "Avariya holati": "Аварийная ситуация",
+    "Favqulodda vaziyatda barcha kolonkalarni to'xtatish uchun tugmani bosing": "Нажмите кнопку для остановки всех колонок в чрезвычайной ситуации",
+    "Unpaid operations": "Неоплаченные операций"
   }
 }
