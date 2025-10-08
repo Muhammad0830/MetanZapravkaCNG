@@ -1,7 +1,11 @@
+
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Providers from "@/context/ThemeProvider";
+
+import { ThemeProvider } from "next-themes";
+import SideBar from "@/components/header/sidebar/sidebar";
 
 type Props = {
   children: React.ReactNode;
@@ -18,13 +22,15 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} suppressHydrationWarning>
       <head />
+
       <body>
         <NextIntlClientProvider>
-          <Providers>
-            <div className="min-h-screen w-full">{children}</div>
-          </Providers>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+            <SideBar>{children}</SideBar>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
   );
 }
+
